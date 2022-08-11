@@ -1,0 +1,114 @@
+<html>
+
+<head>
+
+
+
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/index.css">
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+   <div class="contentDiv">
+    <div class="w-50 mx-auto py-5">
+
+        <div class="mb-3">
+
+            <label for="productName" class="mb-3">Product Name <sup class="text-danger">required</sup></label>
+
+            <input type="text" class="form-control" id="productName">
+        </div>
+        <div class="mb-3">
+
+            <label for="productPrice" class="mb-3">Product Price <sup class="text-danger">required</sup></label>
+
+            <input type="number" class="form-control" id="productPrice">
+        </div>
+        <div class="mb-3">
+
+            <label for="productCategory" class="mb-3">Product Category <sup class="text-danger">required</sup></label>
+
+            <select id="productCategory" class="form-select">
+
+                <option value="tv">tv</option>
+                <option value="mobile">mobile</option>
+                <option value="labtop">labtop</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+
+            <label for="productDescription" class="mb-3">Product Description <sup class="text-success">optional</sup></label>
+
+
+            <textarea id="productDescription" class="form-control"></textarea>
+        </div>
+
+        <div class="mb-3 alert alert-danger no-add">
+            You can't add an empty product <i class="fa-solid fa-face-frown"></i> <br>
+            Product Name, Price and category are required
+        </div>
+        <div class="mb-3 alert alert-info yes-add">
+            Your product was added successfully <i class="fa-solid fa-face-smile-beam"></i>
+        </div>
+        <div class="mb-3 alert alert-warning yes-update">
+            Your product was updated successfully 
+            <i class="fa-solid fa-triangle-exclamation mx-2"></i>
+        </div>
+        <div class="mb-3 alert alert-danger PrName">
+            Your product name must start with 2 alphapet characters at least
+            and musn't contain any special characters   
+            <i class="fa-solid fa-xmark mx-2"></i>
+        </div>
+        <div class="mb-3 alert alert-danger prPrice">
+            Your Product Price is invalid: it should be greater that or equal to 2000
+            and less than or equal to 50000
+            <i class="fa-solid fa-xmark mx-2"></i>
+        </div>
+
+        <button  onclick="addproduct()" id="addButton" data-bs-toggle="modal" data-bs-target="#exampleModal"  class="buttonTest button1">Add Product 
+        <i class="fa-solid fa-plus mx-2"></i></button>
+        <button class="buttonTest button1" id="editButton" style="display: none;" onclick="editItem()">Edit Product
+            <i class="fa-solid fa-keyboard mx-2"></i></button>
+        <button class="buttonTest button3" onclick="clearForm()">clear Form
+            <i class="fa-solid fa-eraser mx-2"></i></button>
+    
+    </div>
+
+    <div class="container">
+
+       <div class="mx-auto d-flex justify-content-center align-items-center my-4 search-style">
+        <input type="text" id="search" onkeyup="search()" placeholder="search...">
+        <i class="fa-solid fa-search text-white"></i>
+       </div>
+
+       <div class="py-5 w-75 mx-auto">
+        <table class="table mx-auto">
+
+            <thead class="text-center">
+
+                <th>#</th>
+                <th>productName</th>
+                <th>productPrice</th>
+                <th>productCategory</th>
+                <th>productDescription</th>
+                <th>update</th>
+                <th>delete</th>
+            </thead>
+            <tbody   id="tableBody">
+
+              
+            </tbody>
+        </table>
+       </div>
+    </div>
+   </div> 
+   
+     <script src="JS/particles.min.js"></script>
+    <script src="JS/index.js"></script>
+</body>
+
+</html>

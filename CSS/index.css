@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'harlow';
+    src: url(../webfonts/HARLOWSI_1.woff);
+}
+:root{
+    --info: #0dcaf0;
+    --danger: #dc3545;
+    --warning: #ffc107;
+}
+body{
+    padding:50px 0 !important;
+    font-family: 'harlow';
+    background-color: black;
+    color: white;
+}
+.contentDiv{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+}
+#particles-js{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+#tableBody td{
+ color: white !important;
+}
+thead{
+    color: white !important;
+}
+.search-style input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 0px;
+    color: white;
+    transition: width 1s !important;
+}
+.search-style input:focus{
+    border: none !important;
+    background-color: transparent;
+    width: 0px;
+}
+
+.search-style{
+    background-color: black;
+    width: fit-content;
+    border-radius: 50px;
+    padding: 10px 5px;
+    border:2px solid white;
+}
+
+.search-style i{
+    padding:5px;
+    border-radius: 50%;
+}
+
+.search-style:hover input{
+    width: 400px;
+}
+
+.search-style input:focus{
+    width :400px;
+}
+
+.buttonTest{
+    outline: none;
+    padding: 5px 20px;
+    position: relative;
+    background-color: transparent;
+    overflow: hidden;
+    border-radius: 30px;
+    transition: all 1s;
+}
+
+.button1{
+    color: var(--info);
+    border-color: var(--info);
+}
+.button1::after{
+ background-color: var(--info);
+}
+.button2{
+    color: var(--warning);
+    border-color: var(--warning);
+}
+.button2::after{
+    background-color: var(--warning);
+}
+.button3{
+    color: var(--danger);
+    border-color: var(--danger);
+}
+.button3::after{
+background-color: var(--danger);
+}
+.buttonTest::after{
+  content:'';
+  position: absolute;
+  width: 100%;
+  height: 0;
+  top: 50%;
+  left: 50%;
+transform: translate(-50%,-50%) rotate(45deg);
+  z-index: -1;
+  transition: height 1s;
+}
+
+.buttonTest:hover::after{
+    height: 400%;
+}
+.buttonTest:hover{
+    color: white;
+}
